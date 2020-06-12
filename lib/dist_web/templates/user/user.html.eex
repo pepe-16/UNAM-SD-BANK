@@ -1,0 +1,5 @@
+<strong><%= first_name(@user) %></strong>
+<p>Id: <%= @user.id %> </p>
+<p>Propietario: <%= @user.owner %> </p>
+<p>Password: <%= @user.password %> </p>
+<p>Password: <%= @user.password_hash %> </p>

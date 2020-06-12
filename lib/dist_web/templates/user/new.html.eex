@@ -1,0 +1,28 @@
+<h1>Nuevo Usuario</h1>
+<%= form_for @changeset, Routes.user_path(@conn, :create), fn f -> %>
+  <%= if @changeset.action do%>
+    <div class= "alet alert-danger">
+      <p>Ocurrió un error</p>
+    </div>
+  <% end %>
+
+  <div>
+    <%= text_input f, :name, placeholder: "Nombre Completo" %>
+    <% error_tag f, :name %>
+  </div>
+  <div>
+    <%= text_input f, :username, placeholder: "Nombre de Usuario" %>
+    <% error_tag f, :username %>
+  </div>
+
+    <div>
+    <%= text_input f, :owner, placeholder: "Propietario" %>
+    <% error_tag f, :owner %>
+  </div>
+
+  <div>
+    <%= password_input f, :password, placeholder: "Password" %>
+    <%= error_tag f, :password %>
+  </div>
+  <%= submit "Crear Usuario" %>
+<%end%>

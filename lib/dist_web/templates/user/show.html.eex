@@ -1,0 +1,10 @@
+<h1>Lista de cuentas</h1>
+
+<table>
+   <%= for user	<- @users do %>
+      <tr>
+       	 <td><b><%= render "user.html", user: user %></td>
+      </tr>
+   <% end%>
+</table>
+
